@@ -11,11 +11,11 @@ function ChatPage() {
                 <SignOutButton className="signOutBtn"/>
                 <div className="messageContainer">
                     <div className="message you">
-                        <p className="content">thissssssssssss isssssss aaaaa realllllly loooong teeeexte</p>
+                        <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
                         <p className="user">You</p>
                     </div>
                     <div className="message">
-                        <p className="content">thissssssssssss isssssss aaaaa realllllly loooong teeeexte</p>
+                        <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
                         <p className="user">You</p>
                     </div>
                     <div className="message you">
