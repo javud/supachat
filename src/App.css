@@ -1,38 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Darker+Grotesque:wght@300..900&display=swap");
 .App {
+  background-color: #1c1c1c;
+  color: white;
+  font-family: "DM Sans", sans-serif;
   text-align: center;
+  min-height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
+.App .sLogo {
+  display: block;
+  width: auto;
+  margin: 0 auto;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .title {
+  display: block;
+  font-size: 50px;
+  margin: 0;
+}
+.App .signInBtn {
+  display: block;
+  color: #1c1c1d;
+  margin: 50px auto auto;
+  width: fit-content;
+  background-color: #6aff0a;
+  border-radius: 20px;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 5px 15px;
+  font-family: "DM Sans", sans-serif;
+  transition: 0.5s ease;
+}
+.App .signInBtn:hover {
+  cursor: pointer;
+  color: #6aff0a;
+  background-color: #1c1c1d;
+  font-size: 32px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #151515;
+}
+.Footer a:link, .Footer a:visited, .Footer a:hover, .Footer a:active {
+  text-decoration: none;
+  color: black;
+  border-radius: 20px;
+  padding: 0 5px;
+  background-color: #d6ffb7;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*# sourceMappingURL=App.css.map */

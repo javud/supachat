@@ -1,0 +1,68 @@
+.ChatPage {
+    background-color: #1c1c1c;
+    color: white;
+    height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    padding: 30px;
+    h1 {
+        margin: auto;
+    }
+    .signOutBtn {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: fit-content;
+        background-color: crimson;
+        border-radius: 20px;
+        border: none;
+        font-size: 16px;
+        padding: 5px 20px;
+        font-family: 'DM Sans', sans-serif;
+        transition: 0.3s ease;
+
+        &:hover {
+            cursor: pointer;
+            filter: brightness(0.8);
+        }
+    }
+    .messageContainer {
+        border: 1px solid #2f2f2f;
+        border-radius: 20px;
+        margin: auto;
+        width: min(90%, 600px);
+        padding: 30px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-self: flex-start;
+            max-width: 70%;
+            text-align: left;
+
+            &.you {
+                align-self: flex-end;
+                .content {
+                    background-color: dodgerblue;
+                }
+                .user {
+                    align-self: flex-end;
+                    margin-right: 5px;
+                }
+            }
+            .content {
+                border-radius: 10px;
+                padding: 15px;
+                background-color: blueviolet;
+                margin: 0;
+            }
+            .user {
+                margin: 0;
+                margin-left: 5px;
+            }
+        }
+    }
+}
