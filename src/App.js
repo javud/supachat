@@ -23,11 +23,11 @@ function App() {
                     Get Started
                 </div>
             </SignInButton>
+            <Footer />
         </SignedOut>
         <SignedIn>
             <ChatPage />
         </SignedIn>
-        <Footer />
     </div>
   );
 }

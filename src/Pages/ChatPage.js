@@ -10,17 +10,39 @@ function ChatPage() {
                 <h1>{user.firstName}</h1>
                 <SignOutButton className="signOutBtn"/>
                 <div className="messageContainer">
-                    <div className="message you">
-                        <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
-                        <p className="user">You</p>
+                    <div className="messages">
+                        <div className="message you">
+                            <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
+                            <p className="user">You</p>
+                        </div>
+                        <div className="message">
+                            <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
+                            <p className="user">You</p>
+                        </div>
+                        <div className="message you">
+                            <p className="content">whats up bro</p>
+                            <p className="user">You</p>
+                        </div>
+                        <div className="message">
+                            <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
+                            <p className="user">You</p>
+                        </div>
+                        <div className="message">
+                            <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
+                            <p className="user">You</p>
+                        </div>
+                        <div className="message">
+                            <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
+                            <p className="user">You</p>
+                        </div>
+                        <div className="message">
+                            <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
+                            <p className="user">You</p>
+                        </div>
                     </div>
-                    <div className="message">
-                        <p className="content">thissssssssssss isssssss a realllllly loooong teeeexte</p>
-                        <p className="user">You</p>
-                    </div>
-                    <div className="message you">
-                        <p className="content">whats up bro</p>
-                        <p className="user">You</p>
+                    <div className="messageBox">
+                        <textarea id="txtArea" rows="1" placeholder="Message"></textarea>
+                        <div className="messageBtn">Send</div>
                     </div>
                 </div>
             </div>

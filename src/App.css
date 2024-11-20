@@ -23,19 +23,19 @@
   margin: 50px auto auto;
   width: fit-content;
   background-color: #6aff0a;
-  border-radius: 20px;
+  border-radius: 25px;
   border: none;
   font-size: 30px;
   font-weight: bold;
   padding: 5px 15px;
   font-family: "DM Sans", sans-serif;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 .App .signInBtn:hover {
   cursor: pointer;
   color: #6aff0a;
   background-color: #1c1c1d;
-  font-size: 32px;
+  transform: scale(1.05);
 }
 
 .Footer {
@@ -45,12 +45,21 @@
   width: 100%;
   background-color: #151515;
 }
-.Footer a:link, .Footer a:visited, .Footer a:hover, .Footer a:active {
+.Footer p {
+  display: block;
+  font-size: 14px;
+}
+.Footer a:link, .Footer a:visited, .Footer a:active {
   text-decoration: none;
-  color: black;
+  color: #161616;
   border-radius: 20px;
   padding: 0 5px;
-  background-color: #d6ffb7;
+  background-color: #8be23f;
+  transition: 0.5s ease;
+}
+.Footer a:hover {
+  background-color: #161616;
+  color: #8be23f;
 }
 
 /*# sourceMappingURL=App.css.map */
