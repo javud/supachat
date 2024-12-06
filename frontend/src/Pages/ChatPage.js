@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import '../Styles/ChatPage.scss';
 import { SignOutButton } from "@clerk/clerk-react";
@@ -17,6 +17,14 @@ function ChatPage() {
     const [loading, setLoading] = useState(true);
     const [sending, setSending] = useState(false);
     const [mode, setMode] = useState('friends');
+    const messagesEndRef = useRef(null);
+
+    // auto scroll to bottom of messages
+    useEffect(() => {
+        if (messagesEndRef.current) {
+            messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [messages]);
 
     // fetch list of users from the server
     useEffect(() => {
@@ -29,12 +37,14 @@ function ChatPage() {
             })
             .catch((error) => {
                 console.error('Error fetching users:', error);
+                alert(error.message + ', please try reloading the page.');
             })
             .finally(() => {
                 setLoading(false);
             });
-    }, []);
+    }, [user.id]);
 
+    // fetch messages for user from supabase database
     const fetchMessages = async () => {
         if(!user || !selectedUser) return;
 
@@ -48,13 +58,15 @@ function ChatPage() {
             .order('time_sent', { ascending: true });
         setLoading(false);
         if(error) {
-            console.log("Error fetching messages: ", error);
+            console.error('Error fetching messages:', error);
+            alert(error.message + ', please try reloading the page.');
         } else {
             console.log("Messages: ", data);
             setMessages(data);
         }
     };
 
+    // send message to usder
     const sendMessage = async () => {
         if(!user || !message || !selectedUser) return;
 
@@ -74,10 +86,12 @@ function ChatPage() {
         setSending(false);
         await fetchMessages();
         if(error) {
-            console.log("Error sending message: ", error);
+            console.error('Error sending message:', error);
+            alert(error.message + ', please try reloading the page.');
         }
     };
 
+    // friends list or chat mode
     function toggleMode(mode) {
         setMode(mode);
     }
@@ -88,6 +102,7 @@ function ChatPage() {
         }
     }, [selectedUser]);
 
+    // change TO user
     function changeSelectedUser(user) {
         if(user !== selectedUser) {
             setMessages([]);
@@ -120,7 +135,10 @@ function ChatPage() {
                     <strong>Supachat Friends</strong>
                     <div className="addFriend">Add friend</div>
                     <div className="users">
-                        {usersList.length === 0 ? (
+                        {loading && (
+                            <p>Loading friends...</p>
+                        )}
+                        {!loading && usersList.length === 0 ? (
                             <p>No friends available.</p>
                         ) : (
                             usersList.map((currUser, index) => (
@@ -147,6 +165,7 @@ function ChatPage() {
                                 </div>
                             ))
                         )}
+                        <div ref={messagesEndRef}/>
                     </div>
                     <div className="messageBox">
                         <textarea
