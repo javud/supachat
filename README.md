@@ -2,11 +2,11 @@
 
 Supachat is a modern chat application built using **React**, **Supabase**, and **Clerk** for authentication. The app enables users to chat with their friends, view message history, and easily send real-time messages.
 
-This project leverages Supabase for database management (storing messages), Clerk for user authentication, and React for the front-end.
+This project uses Supabase for database management (storing messages), Clerk for user authentication, and React for the front-end.
 
-## Features
+## Features (so far)
 
-- **User Authentication:** Users can sign in and out using Clerk authentication.
+- **User Authentication:** Users can sign in/out using Clerk authentication.
 - **User List:** Displays a list of available friends to chat with.
 - **Real-Time Messaging:** Users can send and receive messages with their friends.
 - **Message History:** Displays a history of messages between the logged-in user and their selected friend.
@@ -67,31 +67,3 @@ npm start
 ```
 
 This will start the React development server, and the application will be available at `http://localhost:3000`.
-
-## How It Works
-
-### Authentication with Clerk
-
-The app uses Clerk for handling user sign-in and sign-out. When users visit the chat page, they must be signed in using their Clerk credentials. Once signed in, they are able to view their friends list and start chatting with other users.
-
-### Supabase Integration
-
-Supabase is used to manage user data (messages). Messages are stored in a Supabase database under the `Messages` table. The app fetches messages using Supabase queries and allows users to send new messages, which are inserted into the database.
-
-### Real-Time Messaging
-
-The app is built to show real-time messages between users. Whenever a message is sent, it is immediately displayed in the chat window, and the message history is updated in real-time.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- **Clerk** - For providing an easy-to-use authentication service.
-- **Supabase** - For providing a powerful and open-source backend platform.
-- **React** - For the framework that makes building UIs simple and efficient.
-
----
-
-Happy chatting! 😊
