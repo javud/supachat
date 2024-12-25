@@ -17,6 +17,12 @@
   font-size: 50px;
   margin: 0;
 }
+.App .title::after {
+  content: "beta";
+  font-size: 18px;
+  color: #00d9ff;
+  position: absolute;
+}
 .App .signInBtn {
   display: block;
   color: #1c1c1d;
@@ -36,6 +42,18 @@
   color: #6aff0a;
   background-color: #1c1c1d;
   transform: scale(1.05);
+}
+.App .learnMore {
+  font-weight: bold;
+  color: gray;
+  transition: 0.3s ease;
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 15px auto;
+}
+.App .learnMore:hover {
+  cursor: pointer;
+  color: white;
 }
 
 .Footer {

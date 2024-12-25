@@ -23,6 +23,7 @@ function App() {
                     Get Started
                 </div>
             </SignInButton>
+            <p className="learnMore">Learn More</p>
             <Footer />
         </SignedOut>
         <SignedIn>

