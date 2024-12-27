@@ -4,6 +4,8 @@ Supachat is a modern chat application built using **React**. The app enables use
 
 This project uses Supabase for database management (storing messages), Clerk for user authentication, and React for the front-end.
 
+NOTE: This project is still in development. As of now, no public release is available.
+
 ## Features (so far)
 
 - **User Authentication:** Users can sign in/out using Clerk authentication.
@@ -15,11 +17,11 @@ This project uses Supabase for database management (storing messages), Clerk for
 
 ## Demo
 
-You can check out a live demo of the application [coming soon].
+You can check out a live demo of the application at: [coming soon].
 
 ## Technologies Used
 
-- **React** - Front-end framework for building the user interface.
+- **React** - Frontend framework for building the user interface.
 - **Supabase** - Backend service for handling database (messages) and real-time features.
 - **Clerk** - User authentication service for secure sign-ins and user management.
 - **SCSS** - CSS preprocessor used for styling.
