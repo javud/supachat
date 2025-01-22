@@ -1,5 +1,8 @@
 # Supachat React App
 
+<img width="720" alt="image (11)" src="https://github.com/user-attachments/assets/68967550-a18f-457b-82d8-b91f0cd379ea" />
+
+
 Supachat is a modern chat application built using **React**. The app enables users to chat with their friends, view message history, and easily send real-time messages.
 
 This project uses Supabase for database management (storing messages), Clerk for user authentication, and React for the front-end.
